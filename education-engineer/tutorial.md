@@ -163,7 +163,7 @@ Hostname: web-548f6458b5-jwvsq
 This tutorial created a Kubernetes cluster running in Docker and executed a blocking port-forwarding command. When you're done with the tutorial, clean up as follows:
 
 - To terminate the port-forwarding command, press Control-C from within the shell that is running the command.
-  -To terminate the Kubernetes cluster and remove it from Docker, execute the command `kind delete cluster`.
+- To terminate the Kubernetes cluster and remove it from Docker, execute the command `kind delete cluster`.
 
 # Next Steps
 
