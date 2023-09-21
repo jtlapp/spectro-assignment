@@ -4,14 +4,14 @@ Kubernetes is a popular orchestration platform for deploying applications, but i
 
 `kind` deploys Kubernetes locally on your computer, doing so by executing applications in Docker containers. In fact, the name "kind" is a contraction for "Kubernetes in Docker." Work through this tutorial to learn how to use `kind` to create a local cluster and to deploy a simple "Hello World" web application on this cluster.
 
-## Prerequisites
+# Prerequisites
 
 This tutorial makes the following assumptions:
 
 - You have Docker installed on your computer. For installation assistance, follow the [docker installation instructions](https://docs.docker.com/engine/install/).
 - You have `kind` installed. For installation assistance, follow the [`kind` installation instructions](https://kind.sigs.k8s.io/docs/user/quick-start).
 
-## Create a Cluster
+# Create a Cluster
 
 The first step is to create a local Kubernetes cluster. This cluster will run locally as a Docker container. Execute the following command and wait for setup to complete:
 
@@ -54,7 +54,7 @@ To further debug and diagnose cluster problems, use `kubectl cluster-info dump`.
 
 The Kubernetes cluster is now installed and running, and it is ready to receive your application.
 
-## Deploy an Application
+# Deploy an Application
 
 The next step is to load an application into the cluster. You'll be loading a sample "Hello World" app from an online location (`http://gcr.io/google-samples/hello-app:1.0`).
 
@@ -123,7 +123,7 @@ kubectl apply -f app.yaml
 
 The application is now available to the cluster, but it is not yet accessible outside the cluster, such as via a browser. The final step is to forward a local port to the cluster.
 
-## Forward a Port
+# Forward a Port
 
 To complete the setup, you need to establish a port on `localhost` that forwards to the node in the cluster. Accomplishing this requires both the name of the container and the port of the `web` service. Store these values in environment variables via the following commands:
 
@@ -148,7 +148,7 @@ Forwarding from [::1]:31095 -> 8080
 
 The `kubectl port-forward` command blocks the shell for the duration of the forwarding service. Press Control-C from within the shell to terminate the command.
 
-## Use the Service
+# Use the Service
 
 The application is now set up and running on the indicated port. If you open a browser and visit `localhost` at this port (e.g. at `http://localhost:31095`), you should see a page similar to the following:
 
@@ -158,7 +158,7 @@ Version: 1.0.0
 Hostname: web-548f6458b5-jwvsq
 ```
 
-## Cleanup
+# Cleanup
 
 This tutorial created a Kubernetes cluster running in Docker and executed a blocking port-forwarding command. When you're done with the tutorial, clean up as follows:
 
