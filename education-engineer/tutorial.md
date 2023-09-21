@@ -139,7 +139,7 @@ You can now forward a local port to the `web` service on the cluster. Execute th
 kubectl port-forward $CONTAINER_NAME $SERVICE_PORT:8080
 ```
 
-Take note of the output of this command. The output contain the port you need to use to access the service. For example, given the following output, you will find the service at `http://127.0.0.1:31095` (equivalent to `http://localhost:31095`):
+Take note of the output of this command. The output contains the port you need to use to access the service. For example, given the following output, you will find the service at `http://127.0.0.1:31095` (equivalent to `http://localhost:31095`):
 
 ```
 Forwarding from 127.0.0.1:31095 -> 8080
